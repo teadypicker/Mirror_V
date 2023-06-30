@@ -1,6 +1,9 @@
 pipelines:
   custom: # Pipelines that can only be triggered manually
       sonar:
+      - variables:
+          - name: Olha
+          - name: IT
       - step:
           name: Sync GitHub Mirror
           image: alpine/git:latest
