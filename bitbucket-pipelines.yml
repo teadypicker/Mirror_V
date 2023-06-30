@@ -13,7 +13,7 @@ pipelines:
             - git remote add devops git@github.com:teadypicker/Mirror_V.git
             - git checkout -b main
             - git merge master
-            - git fetch devops main
              --allow-unrelated-histories
+            - git fetch devops main
             - git merge devops/main
             - git push -u devops main:main
