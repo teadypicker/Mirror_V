@@ -14,5 +14,6 @@ pipelines:
             - git checkout -b main
             - git merge master
             - git fetch devops main
+             --allow-unrelated-histories
             - git merge devops/main
             - git push -u devops main:main
