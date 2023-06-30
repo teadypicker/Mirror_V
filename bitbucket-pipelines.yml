@@ -1,0 +1,18 @@
+pipelines:
+    default: 
+      - step:
+          name: Sync GitHub Mirror
+          image: alpine/git:latest
+          clone:
+            enabled: false
+          script:
+            - git config --global user.email "ope@global-mediator.com"
+            - git config --global user.name "Olha Petryk"
+            - git clone git@bitbucket.org:5t6y7u8i9o0p/mirror_repo.git
+            - cd mirror_v2
+            - git remote add devops git@github.com:teadypicker/Mirror_V.git
+            - git checkout -b main
+            - git merge master
+            - git fetch devops main
+            - git merge devops/main
+            - git push -u devops main:main
