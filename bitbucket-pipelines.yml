@@ -1,5 +1,6 @@
 pipelines:
-    default: 
+  custom: # Pipelines that can only be triggered manually
+      sonar:
       - step:
           name: Sync GitHub Mirror
           image: alpine/git:latest
