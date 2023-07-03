@@ -1,6 +1,9 @@
 pipelines:
   custom: # Pipelines that can only be triggered manually
-      sonar:
+      Test_Mirror:
+      - variables:          #list variable names under here
+          - name: Petryk
+          - name: Ukraine
       - step:
           name: Sync GitHub Mirror
           image: alpine/git:latest
