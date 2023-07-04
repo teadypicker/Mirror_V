@@ -16,6 +16,7 @@ pipelines:
             - cd mirror_repo
             - git remote add devops git@github.com:teadypicker/Mirror_V.git
             - git checkout -b main
+            - echo CLIENT_ID $(date) >> output.txt
             - git merge master
             - git fetch devops main
             - git merge devops/main --allow-unrelated-histories
