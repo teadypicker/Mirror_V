@@ -2,7 +2,7 @@ pipelines:
   custom: # Pipelines that can only be triggered manually
       Test_Mirror:
       - variables:          #list variable names under here
-          - name: Petryk
+          - name: CLIENT_ID
           - name: Ukraine
       - step:
           name: Sync GitHub Mirror
